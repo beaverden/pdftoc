@@ -1,0 +1,376 @@
+0    	Cover	  0
+0    	Copyright	  0
+0    	Credits	  0
+0    	About the Authors	  0
+0    	About the Reviewer	  0
+0    	www.PacktPub.com	  0
+0    	Table of Contents	  0
+0    	Preface	  0
+1    	Chapter 1: Current Status of Python	  1
+2    		Why and how does Python change?	  2
+2    		Why and how does Python change?	  2
+3    		Getting up to date with changes – PEP documents	  3
+4    		Python 3 adoption at the time of writing this book	  4
+5    		The main syntax differences and common pitfalls	  5
+5    			The main syntax differences and common pitfalls	  5
+5    			The main syntax differences and common pitfalls	  5
+6    				Syntax changes	  6
+7    				Changes in the standard library	  7
+8    				The popular tools and techniques used for maintaining cross-version compatibility	  8
+8    			The popular tools and techniques used for maintaining cross-version compatibility	  8
+12   		Not only CPython	 12
+13   			Stackless Python	 13
+13   			Stackless Python	 13
+14   			IronPython	 14
+14   			IronPython	 14
+15   			PyPy	 15
+16   		Modern approaches to Python development	 16
+17   		Application-level isolation of Python environments	 17
+19   			Why isolation?	 19
+21   			virtualenv	 21
+21   				virtualenv	 21
+23   				venv	 23
+24   				Which one to choose?	 24
+24   			Which one to choose?	 24
+25   		System-level environment isolation	 25
+26   			Virtual development environments using Vagrant	 26
+27   			Containerization versus virtualization	 27
+28   		Popular productivity tools	 28
+29   			Custom Python shells – IPython, bpython, ptpython, and so on	 29
+30   				bpython	 30
+30   				bpython	 30
+30   				bpython	 30
+31   				Interactive debuggers	 31
+31   			Interactive debuggers	 31
+32   		Useful resources	 32
+33   		Summary	 33
+35   	Chapter 2: Syntax Best Practices – below the Class Level	 35
+36   		Strings and bytes	 36
+36   			Strings and bytes	 36
+38   				Implementation details	 38
+39   				String concatenation	 39
+40   			Lists and tuples	 40
+40   				Lists and tuples	 40
+45   				Dictionaries	 45
+49   				Sets	 49
+50   				Beyond basic collections – the collections module	 50
+51   		Iterators	 51
+51   			Iterators	 51
+52   			The yield statement	 52
+56   			Decorators	 56
+57   				General syntax and possible implementations	 57
+61   				Usage and useful examples	 61
+68   			Context managers – the with statement	 68
+69   				General syntax and possible implementations	 69
+72   		Other syntax elements you may not know yet	 72
+73   			Function annotations	 73
+73   			Function annotations	 73
+74   				The possible uses	 74
+74   				The possible uses	 74
+75   		Summary	 75
+77   	Chapter 3: Syntax Best Practices – above the Class Level	 77
+78   		Subclassing built-in types	 78
+80   		Accessing methods from superclasses	 80
+82   			Old-style classes and super in Python 2	 82
+83   			Understanding Python's Method Resolution Order	 83
+87   			Mixing super and explicit class calls	 87
+87   				Mixing super and explicit class calls	 87
+89   				Heterogeneous arguments	 89
+90   			Best practices	 90
+91   		Advanced attribute access patterns	 91
+92   			Descriptors	 92
+95   				Real-life example – lazily evaluated attributes	 95
+98   			Properties	 98
+101  			Slots	101
+102  		Metaprogramming	102
+103  			Class decorators	103
+103  			Class decorators	103
+105  			Using the __new__() method to override instance creation process	105
+108  			Metaclasses	108
+109  				The general syntax	109
+112  				New Python 3 syntax for metaclasses	112
+115  				Metaclass pitfalls	115
+115  				Metaclass pitfalls	115
+116  			Some tips on code generation	116
+117  				exec, eval, and compile	117
+118  				Abstract Syntax Tree	118
+120  				Projects using code generation patterns	120
+123  		Summary	123
+125  	PEP 8 and naming best practices	125
+125  		PEP 8 and naming best practices	125
+126  			Beyond PEP 8 – team-specific style guidelines	126
+126  			Beyond PEP 8 – team-specific style guidelines	126
+127  		Variables	127
+127  			Variables	127
+128  				Constants	128
+129  				Naming and usage	129
+130  				Public and private variables	130
+131  				Functions and methods	131
+132  				The private controversy	132
+134  				Properties	134
+134  				Properties	134
+134  				Properties	134
+135  				Modules and packages	135
+135  				Modules and packages	135
+136  		Avoiding generic names	136
+136  			Avoiding generic names	136
+136  			Avoiding generic names	136
+136  			Avoiding generic names	136
+136  			Avoiding generic names	136
+138  			Best practices for arguments	138
+138  		Best practices for arguments	138
+139  			Trust the arguments and your tests	139
+139  			Trust the arguments and your tests	139
+141  			Using *args and **kwargs magic arguments carefully	141
+143  		Module and package names	143
+143  		Module and package names	143
+144  		Pylint	144
+144  			Pylint	144
+146  			pep8 and flake8	146
+147  		Summary	147
+149  	Creating a package	149
+149  		Creating a package	149
+150  			The current landscape of Python packaging thanks to PyPA	150
+150  				The current landscape of Python packaging thanks to PyPA	150
+151  				Tool recommendations	151
+152  			setup.py	152
+152  				setup.py	152
+153  				setup.cfg	153
+154  				Most important metadata	154
+154  				Most important metadata	154
+155  				Trove classifiers	155
+156  				Common patterns	156
+161  			Working with packages during development	161
+161  			Working with packages during development	161
+162  				setup.py develop or pip -e	162
+162  				setup.py develop or pip -e	162
+162  				setup.py develop or pip -e	162
+163  		Why is it useful?	163
+163  			Why is it useful?	163
+166  			PEP 420 – implicit namespace packages	166
+167  			Namespace packages in previous Python versions	167
+168  		Uploading a package	168
+169  			Uploading to PyPI – or other package index	169
+169  				Uploading to PyPI – or other package index	169
+170  				.pypirc	170
+171  			sdist	171
+171  				sdist	171
+172  				bdist and wheels	172
+174  		Standalone executables	174
+175  			When are standalone executables useful?	175
+176  			Popular tools	176
+177  				PyInstaller	177
+181  				cx_Freeze	181
+183  				py2exe and py2app	183
+184  			Security of Python code in executable packages	184
+185  				Making decompilation harder	185
+186  		Summary	186
+187  	Chapter 6: Deploying Code	187
+188  		The Twelve-Factor App	188
+189  		Deployment automation using Fabric	189
+195  		Your own package index or index mirror	195
+196  			PyPI mirroring	196
+197  			Deployment using a package	197
+207  		Isolation	207
+207  			Isolation	207
+207  			Isolation	207
+208  			Using process supervision tools	208
+210  			Using reverse HTTP proxies	210
+210  			Using reverse HTTP proxies	210
+211  			Reloading processes gracefully	211
+212  		Code instrumentation and monitoring	212
+213  			Logging errors – sentry/raven	213
+215  			Monitoring system and application metrics	215
+218  			Basic low-level log practices	218
+218  				Basic low-level log practices	218
+220  				Tools for log processing	220
+223  		Summary	223
+225  	Chapter 7: Python Extensions in Other Languages	225
+226  		How do extensions in C or C++ work	226
+226  			How do extensions in C or C++ work	226
+228  		Improving performance in critical code sections	228
+228  			Improving performance in critical code sections	228
+229  			Integrating existing code written in different languages	229
+230  			Writing extensions	230
+230  			Writing extensions	230
+230  		Writing extensions	230
+231  			Pure C extensions	231
+235  				A closer look at Python/C API	235
+240  				Calling and binding conventions	240
+242  				Exception handling	242
+244  				Releasing GIL	244
+246  				Reference counting	246
+248  			Cython as a source to source compiler	248
+248  				Cython as a source to source compiler	248
+250  				Cython as a language	250
+253  		Additional complexity	253
+253  			Additional complexity	253
+254  			Debugging	254
+255  		Loading libraries	255
+255  			Loading libraries	255
+255  				Loading libraries	255
+257  				Calling C functions using ctypes	257
+258  				Passing Python functions as C callbacks	258
+262  			CFFI	262
+263  		Summary	263
+265  	Version control systems	265
+265  		Version control systems	265
+266  			Centralized systems	266
+268  			Distributed systems	268
+270  				Distributed strategies	270
+271  			Use Git if you can	271
+271  			Use Git if you can	271
+272  			Git flow and GitHub flow	272
+276  		Continuous development processes	276
+277  			Continuous integration	277
+278  				Testing every commit	278
+279  				Merge testing through CI	279
+280  				Continuous delivery	280
+280  			Continuous delivery	280
+281  			Continuous deployment	281
+282  			Jenkins	282
+282  				Jenkins	282
+286  				Buildbot	286
+288  				Travis CI	288
+290  				Choosing the right tool and common pitfalls	290
+290  			Choosing the right tool and common pitfalls	290
+291  				Problem 2 – too long building time	291
+291  				Problem 2 – too long building time	291
+292  				Problem 3 – external job definitions	292
+293  				Problem 4 – lack of isolation	293
+294  		Summary	294
+295  	The seven rules of technical writing	295
+295  		The seven rules of technical writing	295
+296  			Write in two steps	296
+297  			Target the readership	297
+298  			Use a simple style	298
+299  			Use realistic code examples	299
+299  			Use realistic code examples	299
+300  			Use a light but sufficient approach	300
+301  			A reStructuredText primer	301
+301  		A reStructuredText primer	301
+303  			Section structure	303
+305  			Lists	305
+306  			Literal block	306
+306  			Literal block	306
+307  			Links	307
+308  		Building the portfolio	308
+308  			Building the portfolio	308
+309  				Design	309
+310  				Usage	310
+315  				Making your own portfolio	315
+315  		Making your own portfolio	315
+316  			Building the landscape	316
+317  				Producer's layout	317
+318  				Consumer's layout	318
+322  			Documentation building and continuous integration	322
+323  		Summary	323
+325  	I don't test	325
+325  		I don't test	325
+326  			Test-driven development principles	326
+328  				Preventing software regression	328
+329  				Providing the best developer documentation	329
+329  				Providing the best developer documentation	329
+330  				Acceptance tests	330
+330  			Acceptance tests	330
+330  				Acceptance tests	330
+331  				Functional tests	331
+331  				Functional tests	331
+332  				Load and performance testing	332
+332  				Load and performance testing	332
+333  				unittest	333
+333  			unittest	333
+333  				unittest	333
+337  				doctest	337
+339  		unittest pitfalls	339
+339  			unittest pitfalls	339
+340  			nose	340
+340  				nose	340
+344  				py.test	344
+348  			Testing coverage	348
+351  			Building a fake	351
+351  				Building a fake	351
+356  				Using mocks	356
+358  			Dependency matrix testing	358
+358  				Dependency matrix testing	358
+362  			Writing a story	362
+362  				Writing a story	362
+364  		Summary	364
+365  	The three rules of optimization	365
+365  		The three rules of optimization	365
+366  			Make it work first	366
+367  			Keep the code readable and maintainable	367
+367  			Keep the code readable and maintainable	367
+368  		Scale the hardware	368
+368  			Scale the hardware	368
+368  			Scale the hardware	368
+369  			Writing a speed test	369
+370  		Profiling CPU usage	370
+370  			Profiling CPU usage	370
+371  				Macro-profiling	371
+375  				Micro-profiling	375
+378  				Measuring Pystones	378
+379  			How Python deals with memory	379
+379  				How Python deals with memory	379
+382  				Profiling memory	382
+390  				C code memory leaks	390
+391  			Profiling network usage	391
+392  		Summary	392
+393  	Chapter 12: Optimization – Some Powerful Techniques	393
+394  		Reducing the complexity	394
+396  			The big O notation	396
+396  			The big O notation	396
+399  		Searching in a list	399
+399  			Searching in a list	399
+400  				Using a set instead of a list	400
+401  		deque	401
+401  			deque	401
+403  			defaultdict	403
+404  			namedtuple	404
+405  		Using heuristics and approximation algorithms	405
+405  			Using heuristics and approximation algorithms	405
+406  			Using task queues and delayed processing	406
+410  			Using probabilistic data structures	410
+411  		Caching	411
+412  			Deterministic caching	412
+415  			Nondeterministic caching	415
+416  			Memcached	416
+416  				Memcached	416
+419  		Summary	419
+421  	Chapter 13: Concurrency	421
+422  		Why concurrency?	422
+423  		Multithreading	423
+424  			What is multithreading?	424
+425  			How Python deals with threads	425
+426  			Delegating work	426
+426  				Delegating work	426
+426  				Delegating work	426
+427  				Multiuser applications	427
+428  				An example of a threaded application	428
+442  		Multiprocessing	442
+445  			The built-in multiprocessing module	445
+449  				Using process pools	449
+450  				Using multiprocessing.dummy as a multithreading interface	450
+451  		Asynchronous programming	451
+452  			Cooperative multitasking and asynchronous I/O	452
+453  			Python async and await keywords	453
+457  			asyncio in older versions of Python	457
+458  			A practical example of asynchronous programming	458
+461  			Integrating nonasynchronous code with async using futures	461
+462  				Executors and futures	462
+464  				Using executors in an event loop	464
+465  		Summary	465
+467  	Creational patterns	467
+467  		Creational patterns	467
+468  			Singleton	468
+471  		Structural patterns	471
+472  			Adapter	472
+474  				Interfaces	474
+487  			Proxy	487
+489  			Facade	489
+490  		Observer	490
+490  			Observer	490
+492  			Visitor	492
+495  			Template	495
+498  		Summary	498
+499  	Index	499
